@@ -9,7 +9,6 @@ class Sketch : NSObject {
     // Position of circle
     var x : Int
     
-    
     // This function runs once
     override init() {
         
@@ -26,28 +25,38 @@ class Sketch : NSObject {
     func draw() {
         
         // Change position to right
-        x += 1
+         x += 1
         
-        // Draw ellipses going right
+        // bottom ellipse going right
         canvas.fillColor = Color.black
-        canvas.drawEllipse(centreX: x, centreY: 30, width: 50, height: 50);
+        canvas.drawEllipse(centreX: x, centreY: 50, width: 50, height: 50);
+        
+        // second ellipse going left
+        canvas.fillColor = Color.blue
+        canvas.drawEllipse(centreX: 500-x, centreY: 150, width: 50, height: 50);
+        
+        // third ellipse going right
         canvas.fillColor = Color.green
         canvas.drawEllipse(centreX: x, centreY: 250, width: 50, height: 50);
+        
+        // fourth ellipse going left
+        canvas.fillColor = Color.orange
+        canvas.drawEllipse(centreX: 500-x, centreY: 350, width: 50, height: 50)
+        
+        // last ellipse going right
         canvas.fillColor = Color.purple
-        canvas.drawEllipse(centreX: x, centreY: 470, width: 50, height: 50)
-      
-     x -= 1
-    //draw ellipses going left
-    canvas.fillColor = Color.blue
-    canvas.drawEllipse(centreX: x, centreY: 140, width: 50, height: 50);
-    canvas.fillColor = Color.orange
-    canvas.drawEllipse(centreX: x, centreY: 350, width: 50, height: 50)
+        canvas.drawEllipse(centreX: x, centreY: 450, width: 50, height: 50)
+    
+       
+
+        
+       
     
     }
     
 
   
-    }
+
     
 
-
+}
