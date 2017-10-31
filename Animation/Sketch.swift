@@ -33,7 +33,17 @@ class Sketch : NSObject {
         canvas.drawEllipse(centreX: x, centreY: y , width: 50, height: 50)
         
        
+        // right down - blue
+        canvas.fillColor = Color.blue
+        canvas.drawEllipse(centreX: x, centreY: 500-y, width: 50, height: 50)
         
+        // left up - green
+        canvas.fillColor = Color.green
+        canvas.drawEllipse(centreX: 500-x, centreY: y, width: 50, height: 50)
+        
+        // left down - yellow
+        canvas.fillColor = Color.yellow
+        canvas.drawEllipse(centreX: 500-x, centreY: 500-x, width: 50, height: 50)
         
     }
     
