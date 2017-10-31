@@ -28,6 +28,7 @@ class Sketch : NSObject {
         x += 1
         y += 1
         
+        canvas.drawShapesWithBorders = false
         // right up - red
         canvas.fillColor = Color.red
         canvas.drawEllipse(centreX: x, centreY: y , width: 50, height: 50)
