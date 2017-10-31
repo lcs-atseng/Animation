@@ -27,6 +27,7 @@ class Sketch : NSObject {
         // Change position to right
          x += 1
         
+        canvas.drawShapesWithBorders = false
         // bottom ellipse going right
         canvas.fillColor = Color.black
         canvas.drawEllipse(centreX: x, centreY: 50, width: 50, height: 50);
